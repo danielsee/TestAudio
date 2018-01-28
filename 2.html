@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+p {
+  text-align: center;
+  font-size: 30px;
+  margin-top:0px;
+}
+
+iframe{
+    margin-left: 19%;
+    width:60%;
+    height:300px;
+
+}
+</style>
+
+
+<body>
+
+ <p>Test audio mobile compatability
+   
+   
+   
+   var maudio = document.getElementById('myaudio');
+var soundSprite = [
+  {start: 0, end: 3000},
+  {start: 3500, end: 6789}
+];
+
+element.addEventListener('touchstart', function(ev) {
+  maudio.play();
+  playSoundFile(0);
+})
+
+function playSoundFile(idx) {
+  maudio.currentPosition = soundSprite[idx].start;
+  var x = setInterval(function() {
+    if(maudio.currentPosition >= soundSprite[idx].end) {
+      maudio.pause(); // There is no stop() in HTML5
+      clearInterval(x);
+    }
+  }, 50); </p>
+ <audio loop="loop" autoplay="autoplay" id="myaudio">
+    <source src="secretBase.mp3" type="audio/mpeg" />
+</audio>
+<iframe  src="https://www.youtube.com/embed/qIF8xvSA0Gw?list=RDEMSlyxbsE8jKkWvL3wnWCS4Q&amp;ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</iframe>
+
+
+</body>
+
+
+</html>
